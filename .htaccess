@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|robots\.txt|assets|js|uploads|css|archivos)
+RewriteRule ^(.*) index.php?/$1 [L]
+php_value max_input_vars 10000
+php_value suhosin.get.max_vars 10000
+php_value suhosin.post.max_vars 10000
+php_value suhosin.request.max_vars 10000
+php_value max_execution_time 300
